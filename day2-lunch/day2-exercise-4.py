@@ -18,5 +18,5 @@ for line in f:
         num_alignments += 1
         if num_alignments < 11:
             print(fields[2])
-    else:
-        break
+        else:
+            break
