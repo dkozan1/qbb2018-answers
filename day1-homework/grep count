@@ -1,0 +1,1 @@
+grep -v "^@" SRR072893.sam | grep -v "2110000" | cut -f 3 | sort | uniq -c | datamash -s -g 1 count 1
