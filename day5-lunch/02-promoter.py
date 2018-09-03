@@ -26,12 +26,14 @@ for i, line in enumerate(ctab_file):
 	strand = fields[2]
 	t_name = fields[5]
 	if "+" in strand:
-		promoter_start =  float(start) - 500
-		promoter_end =  float(start) + 500
+		if int(start) > 500:
+			promoter_start = int(start) - 500
+			promoter_end =  int(start) + 500
 
 	elif "-" in strand:
-		promoter_start = float(end) - 500
-		promoter_end = float(end) + 500
+		if int(end) > 500:
+			promoter_start = int(end) - 500
+			promoter_end = int(end) + 500
 		
 	bed_order = [chrom, str(promoter_start), str(promoter_end), t_name]
 	print("\t".join(bed_order))
