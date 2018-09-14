@@ -1,0 +1,5 @@
+Total number contigs 306
+Min length contigs 31
+Max length contigs 968
+Average length contigs 156.7967213114754
+Length of N50 is 257
